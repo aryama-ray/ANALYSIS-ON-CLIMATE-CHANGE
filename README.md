@@ -43,6 +43,9 @@ After extracting it validates the retrieved data, checks if there are any missin
 
 Exploratory data analysis is performed using BigQuery and visualization is done using Tableau.
 
+  ![image](https://github.com/user-attachments/assets/4cc7c07e-3853-410b-9589-bb34b8bd3784)
+
+
 ### Predictive model using BIG QUERY
 
 For this project, we were able to perform time series to predict the future weather reports based on the archived data information.
