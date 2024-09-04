@@ -10,7 +10,7 @@ The approach of this project is that it provides this platform where all kinds o
 
 The data is first present in the VPC which is then sent to the big query using the data stream. Now this data is stored in the staging database in the big query. The warehouse is created using this staging database. On the other hand, the real-time data is sent through the API which is processed and scheduled to various transformations using airflow. This ETL is runned in cloud composer. This data is scheduled on daily basis and send to the warehouse. Now that the data is stored in the warehouse, we can perform various analysis and create a model to predict the future climate conditions. This data can be even used to perform visualizations using tableau.
 
-![image](https://github.com/user-attachments/assets/af4c83cc-23d6-4adc-b46b-0bc6555e344e)
+   ![image](https://github.com/user-attachments/assets/af4c83cc-23d6-4adc-b46b-0bc6555e344e)
 
 ### Data Sources
 
@@ -30,12 +30,14 @@ Datawarehouse helps in storing the data that is centralized and can intergrate d
 The raw data which is sent through the data stream is fetched and saved under one dataset called climate- data-staging. From this dataset, the data is transformed into star schema, performing various operations like changing the datatypes of the columns, expanding the date column and so on.
 climate_fact - a fact table along with 4 primary dimension tables are created
 
+  ![image](https://github.com/user-attachments/assets/409dce1b-2f83-45dc-bcf5-9f6dee0cc820)
+
 ### Airflow for Real time data 
 
 For this project, the Apache airflow is used to create DAGs to define, schedule and execute a few tasks in a pipeline.Using DAG we extracts the data from openweather API for a particular list of cities. 
 After extracting it validates the retrieved data, checks if there are any missing or errors in the data. It then processes the data after either correcting or filling of the data, subsequently updates the table in Big Query with the number of records or missing records. This raw data is then structured into a data frame including changing few column datatypes to appropriate types.At the end data is loaded into a staging database.
 
-![image](https://github.com/user-attachments/assets/121513b2-ba9a-42da-97e8-76dfdfb1952b)
+   ![image](https://github.com/user-attachments/assets/121513b2-ba9a-42da-97e8-76dfdfb1952b)
 
 ### Data Analysis and Visualization
 
