@@ -35,6 +35,8 @@ climate_fact - a fact table along with 4 primary dimension tables are created
 For this project, the Apache airflow is used to create DAGs to define, schedule and execute a few tasks in a pipeline.Using DAG we extracts the data from openweather API for a particular list of cities. 
 After extracting it validates the retrieved data, checks if there are any missing or errors in the data. It then processes the data after either correcting or filling of the data, subsequently updates the table in Big Query with the number of records or missing records. This raw data is then structured into a data frame including changing few column datatypes to appropriate types.At the end data is loaded into a staging database.
 
+![image](https://github.com/user-attachments/assets/121513b2-ba9a-42da-97e8-76dfdfb1952b)
+
 ### Data Analysis and Visualization
 
 Exploratory data analysis is performed using BigQuery and visualization is done using Tableau.
