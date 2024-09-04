@@ -10,6 +10,7 @@ The approach of this project is that it provides this platform where all kinds o
 
 The data is first present in the VPC which is then sent to the big query using the data stream. Now this data is stored in the staging database in the big query. The warehouse is created using this staging database. On the other hand, the real-time data is sent through the API which is processed and scheduled to various transformations using airflow. This ETL is runned in cloud composer. This data is scheduled on daily basis and send to the warehouse. Now that the data is stored in the warehouse, we can perform various analysis and create a model to predict the future climate conditions. This data can be even used to perform visualizations using tableau.
 
+![image](https://github.com/user-attachments/assets/af4c83cc-23d6-4adc-b46b-0bc6555e344e)
 
 ### Data Sources
 
